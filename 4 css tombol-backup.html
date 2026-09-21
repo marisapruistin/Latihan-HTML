@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tombol dengan Animasi</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 50px;
+            text-align: center;
+            background: #eef2ff;
+            font-family: Arial, sans-serif;
+        }
+
+        .btn {
+            position: relative;
+            overflow: hidden;
+            border: none;
+            border-radius: 8px;
+            padding: 14px 28px;
+            background: linear-gradient(135deg, #4f46e5, #7c3aed);
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Animasi ketika mouse diarahkan ke tombol */
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 9px 20px rgba(79, 70, 229, 0.5);
+        }
+
+        /* Animasi ketika tombol ditekan */
+        .btn:active {
+            transform: scale(0.95);
+        }
+
+        /* Efek gelombang */
+        .btn::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.35);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: width 0.5s ease, height 0.5s ease;
+        }
+
+        .btn:hover::after {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn span {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+
+   <a class="btn" href="https://youtu.be/NwFVSclD_uc?si=l6v7XhJ1VJput3M8" target="_blank">
+    KLIK </a>
+
+</body>
+</html>

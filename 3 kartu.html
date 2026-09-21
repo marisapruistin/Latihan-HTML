@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengatur Komponen Kartu</title>
+
+    <style>
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 300px);
+            gap: 20px;
+            background: linear-gradient(135deg, #e9f564, #fdf2f8);
+            font-family: Arial, sans-serif;
+            justify-content: center;
+        }
+
+        .card {
+            box-sizing: border-box;
+            width: 300px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        /* Tampilan pada layar kecil */
+        @media (max-width: 950px) {
+            .cards {
+                grid-template-columns: repeat(2, 300px);
+            }
+        }
+
+        @media (max-width: 650px) {
+            .cards {
+                grid-template-columns: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cards">
+        <!-- Baris pertama -->
+        <div class="card">
+            <h2>Kartu 1</h2>
+            <p>Ini adalah kartu pertama.</p>
+        </div>
+
+        <div class="card">
+            <h2>Kartu 2</h2>
+            <p>Ini adalah kartu kedua.</p>
+        </div>
+
+        <div class="card">
+            <h2>Kartu 3</h2>
+            <p>Ini adalah kartu ketiga.</p>
+        </div>
+
+        <!-- Baris kedua -->
+        <div class="card">
+            <h2>Kartu 4</h2>
+            <p>Ini adalah kartu keempat.</p>
+        </div>
+
+        <div class="card">
+            <h2>Kartu 5</h2>
+            <p>Ini adalah kartu kelima.</p>
+        </div>
+
+        <div class="card">
+            <h2>Kartu 6</h2>
+            <p>Ini adalah kartu keenam.</p>
+        </div>
+    </div>
+
+</body>
+</html>
